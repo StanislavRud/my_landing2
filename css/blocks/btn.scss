@@ -1,0 +1,44 @@
+
+.wrapper__buttons {
+  padding-top: 30px;
+
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: $black;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid $gray;
+  border-radius: 1.8em;
+  background: none;
+  font-family: inherit;
+  line-height: 1.1;
+  padding: 1em 1.7em;
+  transition: background-color .2s linear, color .2s linear, box-shadow .2s linear;
+  min-width: 170px;
+  text-align: center;
+  font-weight: bold;
+  &:hover {
+    background: $black;
+    color: $white;
+    box-shadow:2px 2px 10px #2B2A2C;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  + .btn {
+    margin-left: 1rem;
+  }
+  &--small {
+    font-size: .9rem;
+    border-width: 2px;
+  }
+}
+
+
+

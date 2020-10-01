@@ -1,0 +1,47 @@
+.nav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+
+  .nav__link {
+    font-size: 0.93rem;
+    color: $black;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 30px;
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 2px;
+      background-color: $black;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      z-index: 1;
+      transition: .2s linear;
+    }
+
+
+    &:hover:not(.nav__link--btn) {
+      &:after {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &--btn {
+      padding: 0.66rem 2rem;
+      border: 2px solid $black;
+      border-radius: 20px;
+      transition: background-color .2s linear, color .2s linear;
+      &:hover {
+        background: $black;
+        color: white;
+      }
+    }
+  }
+}

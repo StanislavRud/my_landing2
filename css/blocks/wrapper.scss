@@ -1,0 +1,40 @@
+.wrapper {
+  .container {
+    .wrapper__inner {
+      display: flex;
+      border-bottom: 1px solid #8d8d8e54;
+      padding: 100px 0 120px;
+      position: relative;
+
+      .wrapper__content {
+        width: 50%;
+        .wrapper__subtitle {
+          font-size: 2.13rem;
+          font-weight: lighter;
+          color: $black;
+          margin-bottom: 10px;
+        }
+        .wrapper__title {
+          font-size: 3rem;
+          font-weight: bold;
+          color: $black;
+          margin-bottom: 10px;
+        }
+        .wrapper__text {
+          font-size: 1.2rem;
+          font-weight: lighter;
+          color: $gray;
+        }
+      }
+      .wrapper__photo {
+          position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+      }
+    }
+  }
+
+}
+
+
