@@ -12,12 +12,21 @@ body {
   font-family: 'Ubuntu', sans-serif;
   font-size: 1rem;
   color: #2b2a2c; }
+  body.no-scroll {
+    overflow: hidden; }
 
 .container {
   width: 100%;
   max-width: 1200px;
   padding: 0 1rem;
   margin: 0 auto; }
+
+.contact__info {
+  margin: 2rem 0 3rem;
+  padding: 0;
+  list-style: none;
+  font-size: 1.1rem;
+  color: #2b2a2c; }
 
 .header {
   padding: 1.2rem 0; }
@@ -139,6 +148,9 @@ body {
   .btn--small {
     font-size: .9rem;
     border-width: 2px; }
+  .btn--thin {
+    min-width: 145px;
+    font-size: .8rem; }
 
 .work {
   display: flex;
@@ -227,12 +239,193 @@ body {
       margin-top: 2rem;
       padding-left: 3.2rem; }
 
+.footer {
+  background: #2b2a2c;
+  padding: 1.35rem 0; }
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between; }
+
+.footer__social {
+  display: flex;
+  align-items: center; }
+
+.footer__nav {
+  font-size: .94rem;
+  display: flex;
+  align-items: center; }
+
+.footer__nav-link {
+  font-size: 0.93rem;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 30px; }
+  .footer__nav-link:after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    z-index: 1;
+    transition: .2s linear; }
+  .footer__nav-link:hover:not(.footer__nav-link--btn):after {
+    display: block;
+    width: 100%; }
+  .footer__nav-link--btn {
+    padding: 0.66rem 2rem;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    transition: background-color .2s linear, color .2s linear; }
+    .footer__nav-link--btn:hover {
+      background: #fff;
+      color: #2b2a2c; }
+
+.modal {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 25, 47, 0.82);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: all 0.8s ease 0s;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  .modal.open {
+    opacity: 1;
+    visibility: visible; }
+  .modal.open .modal_dialog {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1; }
+  .modal.open .modal_contact_op {
+    transform: perspective(600px) translate(0px, 20%) rotateX(0deg);
+    opacity: 1; }
+  .modal .close__modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+
+.modal_dialog {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  position: relative;
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  transition: all .8s ease 0s;
+  opacity: 0; }
+  .modal_dialog--sm {
+    max-width: 900px;
+    padding: 0; }
+
+.modal_close {
+  width: 34px;
+  height: 39px;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  top: .9rem;
+  right: 1rem;
+  z-index: 1;
+  transition: transform .2s linear; }
+  .modal_close:hover {
+    transform: translateY(-2px); }
+  .modal_close:focus {
+    outline: none; }
+
+.modal__content img {
+  width: 100%;
+  margin-top: 1rem; }
+
+.modal__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #2b2a2c;
+  margin-bottom: 3rem; }
+
+.contact {
+  display: flex; }
+
+.contact__left {
+  width: 47%;
+  padding: 2rem; }
+  .contact__left .modal__subtitle {
+    text-transform: uppercase;
+    font-size: 1rem; }
+  .contact__left .contact__info-icon {
+    width: 25px;
+    margin-right: 1rem; }
+
+.contact__info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; }
+  .contact__info-item:last-child {
+    margin-bottom: 0; }
+
+.contact__right {
+  width: 53%;
+  background: url("https://placehold.it/480x700") center no-repeat; }
+
+.form__group {
+  margin-bottom: 1.8rem; }
+
+.form__input,
+.form__textarea {
+  display: block;
+  width: 100%;
+  padding: 1.3rem 1.8rem;
+  font-family: inherit;
+  font-size: .8rem;
+  font-weight: 400;
+  line-height: 1.2;
+  border: 1px solid #6A696B;
+  border-radius: 1.8rem; }
+  .form__input:focus,
+  .form__textarea:focus {
+    outline: none;
+    border-color: #2b2a2c; }
+  .form__input::placeholder,
+  .form__textarea::placeholder {
+    color: #6A696B; }
+
+.form__label {
+  display: inline-block;
+  margin-bottom: .6rem;
+  font-size: .8rem;
+  color: #2b2a2c;
+  font-weight: 700; }
+
+.form__textarea {
+  height: 200px;
+  resize: none; }
+
 .text-center {
   text-align: center; }
+
+.text-right {
+  text-align: right; }
 
 .img {
   display: block;
   max-width: 100%;
   height: auto; }
+
+.mb-0 {
+  margin-bottom: 0; }
 
 /*# sourceMappingURL=main_style.css.map */

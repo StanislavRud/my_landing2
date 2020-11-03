@@ -24,8 +24,7 @@
                     <a href="#" class="nav__link">work</a>
                     <a href="#" class="nav__link">about me</a>
                     <a href="#" class="nav__link">blog</a>
-                    <a href="#" class="nav__link">contact</a>
-                    <a href="#" class="nav__link nav__link--btn">hire me</a>
+                    <a href="#" class="nav__link modal_contact nav__link--btn">contact me</a>
                 </div>
             </div>
         </div>
@@ -41,8 +40,8 @@
                     <p class="wrapper__text">Junior Front-end Developer</p>
                     <div class="social"></div>
                     <div class="wrapper__buttons">
-                        <a class="btn" href="#">hire me</a>
-                        <button class="btn" type="button">see my resume</button>
+                        <a class="btn modal_contact" href="#" >contact me</a>
+                        <a class="btn modal_resume" href="#modal_resume" >see my resume</a>
                     </div>
                 </div>
                 <img src="img/designer_photo@1X.png" class="wrapper__photo" alt="photo">
@@ -173,15 +172,113 @@
                         quam quidem repudiandae velit, veritatis vitae voluptate voluptatem.
                         odio placeat porro quaerat quas quidem voluptate, voluptatum.</p>
                 </div>
-                <a class="btn" href="#">hire me</a>
-                <button class="btn" type="button">see my resume</button>
+                <button class="btn modal_contact" type="button">Contact me</button>
+                <button class="btn modal_resume" type="button">see my resume</button>
             </div>
         </div>
     </div>
 </section>
 <!--About-->
 
+<!--Footer-->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__credits">
+                    <div class="footer__social">
+                        <a href="#" target="_blank">
+                            <img src="./img/linkedin.svg" alt="linkedin" width="24">
+                            <img src="./img/linkedin.svg" alt="linkedin" width="24">
+                            <img src="./img/linkedin.svg" alt="linkedin" width="24">
+                            <img src="./img/linkedin.svg" alt="linkedin" width="24">
+                        </a>
+                    </div>
+                </div>
+                <nav class="footer__nav">
+                    <a href="#" class="footer__nav-link">Work</a>
+                    <a href="#" class="footer__nav-link">About Me</a>
+                    <a href="#" class="footer__nav-link">Contact</a>
+                    <a href="#" class="footer__nav-link modal_contact footer__nav-link--btn" >Contact me</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
 
 
+<!--Footer-->
+
+<!--Modals-->
+    <div class="modal" id="modal_resume">
+        <div class="modal_dialog">
+            <a href="#" class="modal_close" type="button">
+                <img src="./img/close_modal.svg" alt="close">
+            </a>
+            <div class="modal__content">
+                <h2 class="modal__title text-center">Resume</h2>
+
+
+                <div class="text-center">
+                    <a href="./CV_RudStanislav_Front_end.pdf" download class="btn btn--thin">Download pdf</a>
+                    <a href="#" class="btn btn--thin">Print</a>
+                </div>
+                    <img src="./img/CV_RudStanislav_Front_end2-1.png" alt="resume">
+                    <img src="./img/CV_RudStanislav_Front_end2-2.png" alt="resume">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal_contact">
+        <div class="modal_dialog--sm modal_dialog modal_contact_op">
+            <button class="modal_close" type="button">
+                <img src="./img/close_modal.svg" alt="close">
+            </button>
+
+            <div class="contact">
+                <div class="contact__left">
+                    <h2 class="modal__title mb-0">Let's talk!</h2>
+                    <div class="modal__subtitle">Call me or send me a request</div>
+                    <ul class="contact__info">
+                        <li class="contact__info-item">
+                            <img class="contact__info-icon" src="./img/phone.svg" alt="phone">
+                            073-477-04-47
+                        </li>
+                        <li class="contact__info-item">
+                            <img class="contact__info-icon" src="./img/mail.svg" alt="mail">
+                            rudstanislav1990@gmail.com
+                        </li>
+                    </ul>
+
+                    <form action="/" method="post" class="form">
+                        <div class="form__group">
+                            <label class="form__label" for="input-email">Address e-mail</label>
+                            <input class="form__input" name="input-email" id="input-email" placeholder="e-mail" type="text">
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label" for="input-message">Request</label>
+                            <textarea class="form__textarea" name="input-message" id="input-message" placeholder="Input your request" type="text"></textarea>
+                        </div>
+
+                        <div class="text-right">
+                            <button class="btn" type="submit" >Send</button>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="contact__right">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!--Modals-->
+
+
+    <script src="app.js"></script>
 </body>
 </html>
